@@ -25,7 +25,7 @@ module.exports.builder = {
 
 module.exports.handler = async ({tokens, files, outputType}) => {
     try {
-        const occurences = findOccurences(tokens, files)
+        const occurences = findOccurences(tokens, ` ${files} `)
         outputOccurences({occurences, outputType})
     } catch (error) {
         console.log("And the error is ", error);
