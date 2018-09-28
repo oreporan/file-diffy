@@ -18,6 +18,8 @@ In Teamcity, we added a step before running the mobile/web tests, which runs the
 ## Quick Usage
 input:
 ```bash
+npm i -g git-diffy
+
 git-diffy run --tokens web mobile docs --files="packages/package/web/index.js packages/src/mobile.index.ts packages/common/stuff.js"
 ```
 
