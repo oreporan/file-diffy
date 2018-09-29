@@ -24,14 +24,8 @@ module.exports.builder = {
 };
 
 module.exports.handler = async ({tokens, files, outputType}) => {
-    try {
-        const occurences = findOccurences(tokens, ` ${files} `)
-        outputOccurences({occurences, outputType})
-    } catch (error) {
-        console.log("And the error is ", error);
-        process.exit(1)
-    } finally {
-    }
+    const occurences = findOccurences(tokens, ` ${files} `)
+    outputOccurences({occurences, outputType})
 }
 
 const outputOccurences = ({occurences, outputType}) => {

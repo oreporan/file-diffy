@@ -12,7 +12,7 @@ So I decided to create a simple node CLI tool that will accept a bunch of file n
 For example `['web', 'mobile]` or `['common', 'docs']` etc.
 
 ## How we use it
-In Teamcity, we added a step before running the mobile/web tests, which runs the CLI tool, and then skips the next steps depending on the output. Check out the example in `example.sh`.
+In Teamcity, we added a step before running the mobile/web tests, which runs the CLI tool, and then skips the next steps depending on the output. Check out the example in [example.sh](./example.sh).
 
 
 ## Quick Usage
@@ -28,6 +28,12 @@ output:
 ```bash
 web mobile other # Notice that 'other' is also there, because a file not belonging to any token was found
 ```
+
+## How it works
+`file-diffy` is based around the Regex command `[^ ]*[\/|\.| ]<token>[\/|\.][^ ]*`   
+Meaning it will generally search for directory paths and file names containing your token.
+Its also designed not to catch paths like `package/shweb/file.js` when searching for `web` for example.   
+It will also create a category called `other` incase you're interested to know that some files didn't belong to any token.
 
 
 ## Options
