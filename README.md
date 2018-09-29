@@ -1,4 +1,4 @@
-# Git-diffy
+# file-diffy
 
 ## The need
 We were using a mono-repo on our clientside app (using `lerna.js`).    
@@ -18,9 +18,9 @@ In Teamcity, we added a step before running the mobile/web tests, which runs the
 ## Quick Usage
 input:
 ```bash
-npm i -g git-diffy
+npm i -g file-diffy
 
-git-diffy run --tokens web mobile docs --files="packages/package/web/index.js packages/src/mobile.index.ts packages/common/stuff.js"
+file-diffy run --tokens web mobile docs --files="packages/package/web/index.js packages/src/mobile.index.ts packages/common/stuff.js"
 ```
 
 
@@ -31,7 +31,7 @@ web mobile other # Notice that 'other' is also there, because a file not belongi
 
 
 ## Options
-`--tokens` space separated tokens which you want to run `git-diffy` on    
+`--tokens` space separated tokens which you want to run `file-diffy` on    
 `--files` space separated list of file names    
 `--outputType` will let you choose between json, txt, log, if json/text is chosen, a `output.txt` or `output.json` will be created
 

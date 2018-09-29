@@ -1,21 +1,21 @@
 {
-  "name": "git-diffy",
+  "name": "file-diffy",
   "version": "1.0.1",
   "description": "",
   "main": "script.js",
   "bin": {
-    "git-diffy": "script.js"
+    "file-diffy": "script.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oreporan/git-package-diff.git"
+    "url": "git+https://github.com/oreporan/file-diffy.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oreporan/git-package-diff/issues"
+    "url": "https://github.com/oreporan/file-diffy/issues"
   },
-  "homepage": "https://github.com/oreporan/git-package-diff#readme",
+  "homepage": "https://github.com/oreporan/file-diffy#readme",
   "dependencies": {
     "yargs": "^12.0.2"
   }
