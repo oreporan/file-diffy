@@ -38,10 +38,10 @@ const outputOccurences = ({occurences, outputType}) => {
     switch(outputType)
     {
         case 'json':
-            fs.writeFileSync(`${__dirname}/output.json`, JSON.stringify(occurences, null, 4))
+            fs.writeFileSync(`./output.json`, JSON.stringify(occurences, null, 4))
             break;
         case 'txt':
-            fs.writeFileSync(`${__dirname}/output.txt`, Object.keys(occurences).join('\n'))
+            fs.writeFileSync(`./output.txt`, Object.keys(occurences).join('\n'))
             break;
         case 'log':
             console.log(Object.keys(occurences).join(' '))
