@@ -49,7 +49,7 @@ const outputOccurences = ({occurences, outputType}) => {
 const findOccurences = (diffys, files) => {
     let filesInProgress = files.repeat(1);
     let occs =  diffys.reduce((acc, curr) => {
-        const patt = new RegExp(`[^ ]*[\/|\.| ]${curr}[\/|\.][^ ]*`, 'g')
+        const patt = new RegExp(`[^ ]*[\/|\.| |-]${curr}[\/|\.|-][^ ]*`, 'g')
         filesInProgress = filesInProgress.replace(patt, "")
         if (patt.test(files)) acc[curr] = true
         return acc
